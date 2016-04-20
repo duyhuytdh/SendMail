@@ -35,14 +35,18 @@ namespace SendMail
                 if (radio_service_google.Checked)
                 {
                     GoogleMailService.initService();
-                    GoogleMailService.sendMail("duyhuytdh@gmail.com", Email.createMessage("Subject: Test mail"
-                                                                                        , "Test email google API"
+                    GoogleMailService.sendMail("duyhuytdh@gmail.com", Email.createMessage("Subject: Test email with Google API"
+                                                                                        , "Hi you, I am test email google API"
                                                                                         , "duyhuytdh@gmail.com"
                                                                                         , "knjght9x15@gmail.com"));
                 }
                 else if(radio_service_stpm.Checked)
                 {
-                    STPMService.SendMail();
+                    STPMService.SendMail("mobilinksendmailtest01@gmail.com"
+                                        , "test@123456"
+                                        , "duyhuytdh@gmail.com"
+                                        , "Subject:Test email with STPM"
+                                        , "Hi you, I am test STPM Email");
                 }
                 string message = "Gửi email thành công";
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + message + "');", true);

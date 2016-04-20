@@ -11,14 +11,15 @@ namespace SendMail.ServiceMail
 {
     public static class STPMService
     {
-        public static void SendMail()
+        public static void SendMail(string fromMail
+                                    , string password 
+                                    , string toMail
+                                    , string subject
+                                    , string body)
         {
 
-            var fromAddress = new MailAddress("mobilinksendmailtest01@gmail.com", "From Name");
-            var toAddress = new MailAddress("duyhuytdh@gmail.com", "To Name");
-            const string fromPassword = "test@123456";
-            const string subject = "Subject";
-            const string body = "Test email STPM";
+            var fromAddress = new MailAddress(fromMail, "From Mobilink");
+            var toAddress = new MailAddress(toMail, "To Name");
 
             var smtp = new SmtpClient
             {
@@ -27,7 +28,7 @@ namespace SendMail.ServiceMail
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                Credentials = new NetworkCredential(fromAddress.Address, password)
             };
             using (var message = new MailMessage(fromAddress, toAddress)
             {
@@ -38,7 +39,5 @@ namespace SendMail.ServiceMail
                 smtp.Send(message);
             }
         }
-
-        
     }
 }

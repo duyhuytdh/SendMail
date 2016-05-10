@@ -52,6 +52,7 @@
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/SendMail">Send Mail</a></li>
+                        <li><a runat="server" href="~/SendMailwithContents">Campaign</a></li>
                         <li><a runat="server" href="~/Contact">Contacts</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                     </ul>

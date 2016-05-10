@@ -8,9 +8,15 @@ using System.Web;
 
 namespace SendMail.ServiceMail
 {
-    public static class Email
+    public class CreateMail
     {
-        public static Message createMessage(string subject
+
+        public string fromMail;
+        public string toMail;
+        public string subject;
+        public string body;
+
+        public Message createMessage(string subject
                                             , string body
                                             , string fromMail
                                             , string toMail)
@@ -29,7 +35,7 @@ namespace SendMail.ServiceMail
             return new Message { Raw = Base64UrlEncode(msgStr.ToString()) };
         }
 
-        private static string Base64UrlEncode(string input)
+        private string Base64UrlEncode(string input)
         {
             var inputBytes = System.Text.Encoding.UTF8.GetBytes(input);
             // Special "url-safe" base64 encode.

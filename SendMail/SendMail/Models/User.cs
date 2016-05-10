@@ -20,7 +20,7 @@ namespace SendMail.Models
             this.SendMails = new HashSet<SendMail>();
         }
     
-        public long IDUser { get; set; }
+        public long UserID { get; set; }
         public string Email { get; set; }
         public byte[] AccountName { get; set; }
         public byte[] Password { get; set; }

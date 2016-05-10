@@ -14,15 +14,23 @@ namespace SendMail.Models
     
     public partial class SendMail
     {
-        public long IDSendMail { get; set; }
-        public long IDUser { get; set; }
-        public long IDContact { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SendMail()
+        {
+            this.Campaigns = new HashSet<Campaign>();
+        }
+    
+        public long SendMailID { get; set; }
+        public long UserID { get; set; }
+        public long ContactID { get; set; }
         public System.DateTime TimeSend { get; set; }
         public bool StatusSend { get; set; }
-        public string EmailUse { get; set; }
-        public string TypeServiceUse { get; set; }
+        public string EmailUsed { get; set; }
+        public string TypeServiceUsed { get; set; }
         public string Note { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Campaign> Campaigns { get; set; }
         public virtual Contact Contact { get; set; }
         public virtual User User { get; set; }
     }

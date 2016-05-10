@@ -25,8 +25,11 @@ namespace SendMail.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Campaign> Campaigns { get; set; }
         public virtual DbSet<Contact> Contacts { get; set; }
+        public virtual DbSet<Email> Emails { get; set; }
         public virtual DbSet<SendMail> SendMails { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }

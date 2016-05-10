@@ -230,7 +230,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="frmCampaign.aspx" />
+    <Content Include="frmContact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -266,8 +267,11 @@
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\calendar-en.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.dynDateTime.min.js" />
+    <Content Include="Scripts\jquery.timepicker.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -296,9 +300,10 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="SendMail.aspx" />
+    <Content Include="frmSendMail.aspx" />
     <Content Include="SendMailwithContents.aspx" />
     <Content Include="Site.Master" />
+    <Content Include="Styles\calendar-blue.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -325,12 +330,19 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="frmCampaign.aspx.cs">
+      <DependentUpon>frmCampaign.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="frmCampaign.aspx.designer.cs">
+      <DependentUpon>frmCampaign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmContact.aspx.cs">
+      <DependentUpon>frmContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmContact.aspx.designer.cs">
+      <DependentUpon>frmContact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -378,12 +390,12 @@
       <DependentUpon>SendMailModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SendMail.aspx.cs">
-      <DependentUpon>SendMail.aspx</DependentUpon>
+    <Compile Include="frmSendMail.aspx.cs">
+      <DependentUpon>frmSendMail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SendMail.aspx.designer.cs">
-      <DependentUpon>SendMail.aspx</DependentUpon>
+    <Compile Include="frmSendMail.aspx.designer.cs">
+      <DependentUpon>frmSendMail.aspx</DependentUpon>
     </Compile>
     <Compile Include="SendMailwithContents.aspx.cs">
       <DependentUpon>SendMailwithContents.aspx</DependentUpon>

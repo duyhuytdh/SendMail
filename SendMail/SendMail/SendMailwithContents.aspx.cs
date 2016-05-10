@@ -92,7 +92,7 @@ namespace SendMail
         {
             try
             {
-                Email email = new Email();
+                EmailSend email = new EmailSend();
                 email.fromEmail = ip_txt_from_email.Value;
                 email.passWordSendMail = ip_txt_pass_email.Value;
          

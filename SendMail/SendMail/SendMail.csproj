@@ -345,7 +345,7 @@
     <Compile Include="Models\Contact.cs">
       <DependentUpon>SendMailModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\EmailSend.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\SendMail.cs">
       <DependentUpon>SendMailModel.tt</DependentUpon>

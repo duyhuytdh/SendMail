@@ -5,7 +5,7 @@ using System.Web;
 
 namespace SendMail.Models
 {
-    public class Email
+    public class EmailSend
     {
         public string fromEmail { get; set; }
         public string toEmail { get; set; }
